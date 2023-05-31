@@ -1,0 +1,140 @@
+@import '../node_modules/bootstrap/scss/bootstrap-reboot.scss'; //CSS RESET
+@import '../node_modules/bootstrap/scss/bootstrap-grid.scss'; //格線系統
+
+
+$dark:#000;
+$primary:#FF7A00;
+$primary-light:#FF9900;
+$secondary:#3586FF;
+$secondary-light:#0065FC;
+
+.open-sans-extrabold{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+.noto-sans-block{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+
+}
+.noto-sans-black{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+
+}
+.noto-sans-light{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+
+}
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.brand{
+    font-size: 24px;
+}
+.navbar{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color: rgba(white,0.3);
+    backdrop-filter: blur(3px);
+    z-index: 1000;
+
+    .navbar-list{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+    }
+    .list-items{
+        padding: 1rem;
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        &:hover, :active{
+            color: orange;
+
+        }
+    }
+}
+
+.section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #eee;
+}
+
+//button
+.btn-primary{
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    width: 50%;
+    background-image: linear-gradient(to bottom,$primary,$primary-light);//(由上到下漸變色)
+    color: white;
+    transition: box-shadow 0.15;
+
+    &:hover,&.active{
+        // background-image: linear-gradient(to bottom,
+        // darken($primary,3%), 
+        // darken($primary-light,5%)); //暗一點暗5%就好
+
+        //----------//
+
+        background-image: linear-gradient(to bottom, $primary,
+        $primary-light);
+        box-shadow: $primary-light 5px 5px 15px;
+
+    }
+}
+
+.social-link {
+    display: inline-block;
+    padding: 0 4px;
+    margin-right: 6px;
+    text-decoration: none;
+    color: #555555;
+}
+
+
+// Unlities.scss ( 一些常用的scss )
+.d-flex{
+    display: flex;
+
+}
+.justify-contect-between{
+    justify-content: space-between;
+
+}
+.aligm-items-center{
+    align-items: center;
+}
+.p-relative{
+    position: relative;
+}
+.p-absolute{
+    position: absolute;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+.pt-20{
+    padding-top: 20px;
+}
+.z-index--1{
+    z-index: -1;
+}
+.display-h1{
+    font-size: 68px;
+    line-height: 1.2;
+
+}
